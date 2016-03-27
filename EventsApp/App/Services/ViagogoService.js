@@ -6,13 +6,11 @@ var eventsApp;
         (function (services) {
             var ViagogoService = (function () {
                 function ViagogoService($http) {
-                    this.httpService = null;
+                    this.$http = $http;
                     this.baseUrl = "/api/Events";
-                    this.httpService = $http;
-                    var self = this;
                 }
                 ViagogoService.prototype.getList = function () {
-                    return this.httpService.get(this.baseUrl + "/Get");
+                    return this.$http.get(this.baseUrl + "/Get");
                 };
                 ViagogoService.$inject = ["$http"];
                 return ViagogoService;

@@ -1,5 +1,5 @@
-var eventApps;
-(function (eventApps) {
+var eventsApp;
+(function (eventsApp) {
     var events;
     (function (events_1) {
         var EventsListController = (function () {
@@ -60,6 +60,6 @@ var eventApps;
         }());
         events_1.EventsListController = EventsListController;
         eventsApp.events.mainModule.controller("EventsListController", EventsListController);
-    })(events = eventApps.events || (eventApps.events = {}));
-})(eventApps || (eventApps = {}));
+    })(events = eventsApp.events || (eventsApp.events = {}));
+})(eventsApp || (eventsApp = {}));
 //# sourceMappingURL=EventsList.js.map

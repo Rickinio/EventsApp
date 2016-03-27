@@ -1,4 +1,4 @@
-﻿module eventApps.events {
+﻿module eventsApp.events {
 
     declare var google: any;
 
@@ -9,7 +9,7 @@
         public pagedEvents = [];
         public markers = [];
 
-        constructor(public events: eventApp.models.Event[]) {
+        constructor(public events: eventsApp.models.Event[]) {
             if (events && events.length > 0) {
                 this.totalItems = events.length;
                 this.events[0].IsSelected = true;
@@ -35,7 +35,7 @@
                 center: { lat: this.events[0].Venue.Latitude, lng: this.events[0].Venue.Longitude }
             });
 
-            this.events.forEach(function (e: eventApp.models.Event) {
+            this.events.forEach(function (e: eventsApp.models.Event) {
                 var myLatLng = { lat: e.Venue.Latitude, lng: e.Venue.Longitude };
                 var contentString = '<h3>'+ e.Name +'</h3><p>' + e.Venue.Name + '</p>'
 

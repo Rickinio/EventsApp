@@ -1,4 +1,4 @@
-﻿declare module eventApp.models {
+﻿declare module eventsApp.models {
     export interface Event {
         Name: string;
         MinTicketPrice: Money;
