@@ -1,0 +1,10 @@
+﻿<div class="row">
+    <div class="col-xs-12" id="map">
+    </div>
+</div>
+
+<div class="row">
+    <ul infinite-scroll="vm.loadMore()" class="list-group">
+        <li data-ng-click="vm.centerMap($index)" data-ng-class="{'cheapest':event.IsCoutryCheapest, 'active':event.IsSelected}" data-ng-repeat="event in vm.pagedEvents track by $index" class="list-group-item cursor-pointer">{{event.StartDate | dateToIso | date:'EEEE, d MMMM, y HH:mm'}} <span class="special-ticket" data-ng-if="event.IsCoutryCheapest">Cheapest ticket in</span> {{event.Venue.Country.Name}} {{event.Venue.City}} {{event.Venue.Name}} {{event.MinTicketPrice.Display}}</li>
+    </ul>
+</div>
